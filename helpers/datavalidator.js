@@ -1,10 +1,11 @@
 const Joi = require("joi");
 
-function dataValidey(data) {
+function dataValidator(data) {
   const schema = Joi.object({
-    fileName: Joi.string().required(),
+    filename: Joi.string().required(),
     content: Joi.string().required(),
   });
   return schema.validate(data);
 }
-module.exports = dataValidey;
+
+module.exports = dataValidator;
